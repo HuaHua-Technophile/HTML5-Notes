@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-1-3label焦点转换控件、input输入控件</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/2561x1943暗色玻璃水珠.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      p {
+        background: rgba(130, 0, 156, 0.342);
+        border-radius: 20px;
+        padding: 10px;
+      }
+
+      .form1 {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+        background: linear-gradient(
+          45deg,
+          rgba(204, 0, 255, 0.301),
+          rgba(0, 17, 255, 0.301),
+          rgba(0, 255, 157, 0.301),
+          rgba(21, 255, 0, 0.301),
+          rgba(255, 238, 0, 0.301),
+          rgba(255, 174, 0, 0.301),
+          rgba(255, 0, 0, 0.301)
+        );
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="form1" action="#" method="GET">
+      <label for="name">用户名：</label>
+      <input type="text" value="菜虚琨" maxlength="3" id="name" /><br /><br />
+      <!--maxlength为最大输入长度-->
+      <label for="password">密码：</label>
+      <input type="password" id="password" /><br /><br />
+      性别：
+      <input type="radio" name="sex" />女
+      <input type="radio" name="sex" checked="checked" />人妖<br /><br />
+      <!--在拥有多个相同name值的控件中选择一个，所以都设置为“sex”的name-->
+      <!--checked属性可指定该控件被默认被选中-->
+      兴趣：<br />
+      <input type="checkbox" name="hobby" checked="checked" />唱<br />
+      <input type="checkbox" name="hobby" checked="checked" />跳<br />
+      <input type="checkbox" name="hobby" checked="checked" />Rap<br />
+      <input type="checkbox" name="hobby" checked="checked" />篮球<br />
+      <input type="checkbox" name="hobby" />丢唇膏<br />
+      <input type="checkbox" name="hobby" />捂裆突击<br /><br />
+      上传中分头像：
+      <input type="file" name="faces" id="faces" /><br /><br />
+      <input type="submit" />
+      <input type="reset" />
+      <input type="button" value="普通按钮" />
+      <input type="image" src="./img/登陆.gif" />
+      <!--
+        <input type="hidden">该控件为隐藏域，有没有都显示得一样
+        -->
+      <!--尽可能为所有input控件添加“name”参数值，可方便理解与维护，且name值相关一些属性值-->
+    </form>
+    <p>
+      input元素的属性值设置为radio时，呈现单选按钮。用于单项选择。
+      <br />但必须为同一组的选项指定相同的name值，这样“单选”才会生效
+      <br />可对其中的input元素应用checked属性，指定默认选中项
+    </p>
+    <p>
+      input元素的属性值设置为checkbox时，呈现复选框。用于多项选择。
+      <br />可对其中的input元素应用checked属性，指定默认选中项
+    </p>
+    <p>input元素的属性值设置为file时，用于让用户选择文件。</p>
+    <p>
+      上方表单的“用户名”和“密码”文本在label标签内，该元素/标签不会向用户呈现任何特殊效果。它为鼠标用户改进了可用性：
+      <br />当用户点击该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上：label标签的
+      for 属性应当与相关元素的 id 属性相同。 <br />label for="控件id名称"
+    </p>
+  </body>
+</html>

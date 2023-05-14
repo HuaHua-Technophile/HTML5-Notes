@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-3-3required必填属性.html</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/2561x1943暗色玻璃水珠.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .author_name {
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      p {
+        padding: 10px;
+        background: linear-gradient(
+          90deg,
+          rgba(49, 0, 59, 0.37),
+          rgba(50, 59, 0, 0.37),
+          rgba(70, 0, 0, 0.37)
+        );
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="author_name" action="#" method="GET">
+      请输入该网页作者的名字：
+      <input
+        type="text"
+        name="author_name"
+        pattern="吴彦祖|彭于晏"
+        placeholder="请输入‘吴彦祖’或‘彭于晏’"
+        list="autor"
+        required />
+      <datalist id="autor">
+        <option value="吴彦祖"></option>
+        <option value="彭于晏"></option>
+      </datalist>
+      <br />
+      <br />
+      <input type="submit" value="提交" />
+    </form>
+    <p>
+      required属性用于指定input控件中输入框不能为空。
+      <br />同multiple属性一样，可不设置参数值'required',也能生效
+    </p>
+  </body>
+</html>

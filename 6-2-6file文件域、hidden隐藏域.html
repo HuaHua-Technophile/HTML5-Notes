@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-2-6file文件域、hidden隐藏域</title>
+  </head>
+  <body>
+    <form action="" enctype="multipart/form-data">
+      <input type="file" name="img" id="img" />
+    </form>
+    <hr />
+    <p>
+      form表单中的“file”文件域是一种用于上传文件的表单控件。它可以让用户从本地选择一个文件，并将其作为表单数据提交给服务器。
+      <br />当使用文件域file时，必须在form的标签中说明编码方式“enctype=“multipart/form-data”。
+      这样才能保证文件数据能正确地传输到服务器。
+    </p>
+    <hr />
+    <form action="">
+      <input type="hidden" />
+    </form>
+    <hr />
+    <p>
+      hidden隐藏域是一种在页面中对于用户是不可见的表单控件。它可以用于收集或发送信息，以利于被处理表单的程序所使用。
+      <br />hidden隐藏域的基本语法是：input type="hidden" name="field_name"
+      value="value"
+      <br />其中，name属性用于指定隐藏域的名称，value属性用于指定隐藏域的值。当用户提交表单时，隐藏域的信息也会被一起发送到服务器。
+    </p>
+  </body>
+</html>

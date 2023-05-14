@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>2-1-1多级标题h元素</title>
+    <style type="text/css">
+      :root {
+        background: #c8c8c8 url(./img/多色条纹3000x2000.jpg) fixed center;
+        background-size: cover;
+        color: #1e1e1e;
+      }
+
+      .text1 {
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top left,
+          #ff006a52,
+          #00e1ff52,
+          #645d0052,
+          #64004852,
+          #64520052,
+          #00643252,
+          #64000052
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="text1">
+      元素呈现了六个不同的级别的标题，h1 级别最高，而 h6级别最低
+      <br />此元素则为h1级标题元素
+    </h1>
+    <p>h1~3比较常用，因为一般文档标题层次在3级左右</p>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>3-3-4video视频元素用法</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/多彩肥皂泡3000x1770.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+      .p1 {
+        text-align: center;
+        color: #a3a3a3;
+        padding: 10px;
+        margin: auto;
+        max-width: fit-content;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 136, 0, 0.301),
+          rgba(0, 255, 64, 0.301),
+          rgba(0, 17, 255, 0.301),
+          rgba(255, 0, 212, 0.301)
+        );
+        border-radius: 30px;
+      }
+      .h1 {
+        text-align: center;
+      }
+      video {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="p1">
+      video元素可以播放视频文件
+      <br /><strong>但必须设定controls属性才能提供播放控件。</strong
+      >(可不设置属性值) <br />可在video标签之间
+      <br />还能设置autoplay属性，用于在页面加载完成后自动播放视频(可不设置属性值)
+      <br />设置loop属性用于循环播放(可不设置属性值)
+      <br />设置属性值preload使其预加载
+      <br />设置poster属性值，该属性值链接一个图像，在视频缓冲不足时显示
+    </p>
+    <details>
+      <summary>点我查看《代码之子》Coding With You</summary>
+      <h1 class="h1">《代码之子》Coding With You</h1>
+      <video class="video" src="./video/代码之子@1080P@24hz.mp4" controls>
+        您的浏览器暂不支持视频控件，请更换浏览器后尝试打开
+      </video>
+    </details>
+  </body>
+</html>

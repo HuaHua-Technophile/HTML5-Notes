@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-3-12pattern匹配模式属性(正则表达式)</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/5616x3744五彩的碎镜装饰.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+      p {
+        margin: 20px;
+        padding: 10px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 0, 0, 0.295),
+          rgba(0, 255, 0, 0.295),
+          rgba(0, 0, 255, 0.295)
+        );
+        border-radius: 20px;
+      }
+      .username,
+      .pwd {
+        width: 375px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="GET">
+      账号:
+      <input
+        type="text"
+        class="username"
+        name="username"
+        pattern="^[a-zA-Z][a-zA-Z0-9_]{4,15}$"
+        placeholder="(以字母开头，允许5-16字节，允许字母数字下划线)" />
+      <br />
+      <br />
+      <br />
+      密码:
+      <input
+        type="password"
+        class="pwd"
+        name="pwd"
+        pattern="^[a-zA-Z]\w{5,17}$"
+        placeholder="(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)" />
+      <br />
+      <br />
+      <br />
+      身份证号:
+      <input
+        type="text"
+        name="mycard"
+        pattern="^\d{15}|\d{18}$"
+        placeholder="(15位或18位数字)" />
+      <br />
+      <br />
+      <br />
+      Email地址:
+      <input
+        type="email"
+        name="myemail"
+        pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" />
+      <input type="submit" value="提交" />
+    </form>
+    <p>
+      pattern属性可检验input控件的输入内容，是否符合所定义的正则表达式
+      <br />该正则表达式以"^"开头，"$"结尾
+    </p>
+  </body>
+</html>

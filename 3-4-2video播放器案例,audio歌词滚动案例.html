@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>3-4-2video播放器案例</title>
+    <link rel="stylesheet" href="./3-4-2video阶段案例.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <!-- require APlayer -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+  </head>
+  <body>
+    <meting-js server="tencent" type="playlist" id="8635325041"></meting-js>
+    <div id="player">
+      <!-- <video class="video" autoplay loop muted> 
+        muted属性表示无声播放
+        不设置controls属性，就没有播放控件，辅以自动播放即可
+        因为默认自动播放比较打扰用户，所以还需满足以下条件之一才能自动播放，以实现更好的用户体验。
+视频静音（通过加上 muted 属性）或音量设置为 0
+用户与网站进行了交互（通过点击、敲击、按键等）
+站点已被列入浏览器白名单；
+
+浏览器确定用户频繁使用媒体，自动加入白名单
+或者通过首选项
+或其他用户界面功能手动发生
+
+自动播放功能策略授予了 <iframe> 及其文档自动播放支持。 
+        <source src="./video/你的名字@1080P24hz.mp4" />
+        </video> -->
+      <video src="./video/你的名字@1080P24hz.mp4" id="V"></video>
+      <div id="controls">
+        <!-- 播放/暂停 -->
+        <div id="PlayBtn"><div></div></div>
+        <!-- 进度条 -->
+        <div id="progress">
+          <div id="loaded"></div>
+          <div class="line"></div>
+          <div class="bar"></div>
+        </div>
+        <!-- 视频已过时间/总时长 -->
+        <div class="timer">
+          <span id="currPlayTime">00:00:00</span>
+          <span>/</span>
+          <span id="totalTime">00:00:00</span>
+        </div>
+        <!-- 全屏 -->
+        <div id="Full_screen"></div>
+      </div>
+    </div>
+    <img id="cd" src="./img/前前前世cd700x700.jpeg" alt="cd封面" />
+    <div id="Lyrics"><ul></ul></div>
+    <audio src="./audio/前前前世.flac" id="audio" controls></audio>
+    <script src="./3-4-2video阶段案例.js" defer></script>
+    <!-- defer延迟载入，使得你可以在页面任意地方导入js文件 -->
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>花花</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 300px;
+        margin: 100px auto;
+        /* background: skyblue; */
+      }
+
+      .box ul li {
+        /* background: orange; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .box ul li span {
+        background: #b4b7ba;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .box ul li span.active {
+        background: #f34343;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <ul>
+        <li>
+          <h2>会不会(吉他版)</h2>
+          <span class="active">取消收藏</span>
+        </li>
+        <li>
+          <h2>会不会(吉他版)</h2>
+          <span>未收藏</span>
+        </li>
+      </ul>
+    </div>
+    <script>
+      var songs = [
+        {
+          id: 1,
+          name: "会不会（吉他版）",
+        },
+        {
+          id: 2,
+          name: "是但求其爱",
+        },
+        {
+          id: 3,
+          name: "我很好（吉他版）",
+        },
+        {
+          id: 4,
+          name: "海底",
+        },
+        {
+          id: 5,
+          name: "执迷不悟",
+        },
+        {
+          id: 6,
+          name: "他只是经过",
+        },
+        {
+          id: 7,
+          name: "经济舱 (Live)",
+        },
+        {
+          id: 8,
+          name: "是想你的声音啊",
+        },
+        {
+          id: 9,
+          name: "苦尽甘来",
+        },
+        {
+          id: 10,
+          name: "天外来物",
+        },
+      ];
+      // 要求：
+      // 1. 每一首歌都有一个 “未收藏/取消收藏” 按钮
+      // 2. 当歌曲已被收藏时按钮显示“取消收藏”，否则显示“未收藏”
+      // 3. 创建一个收藏列表，将所有已收藏的歌曲展示在列表中
+      // 4. 将收藏的歌曲信息存储在localStorage中持久保存，保证每次打开页面已收藏的歌曲都会正确展示在收藏列表中
+
+      // 获取相关dom对象
+      var objUl = document.querySelector(".box ul");
+
+      // 默认一打开页面,我们需要去尝试获取localStorage里面的songList数据
+      // console.log(localStorage.getItem("songList"));
+      if (localStorage.getItem("songList") === null) {
+        // 如果存在
+        // 处理数据, 给数据中每个对象添加一个isCollect属性,表示是否已经收藏, false表示未收藏
+        songs = songs.map(function (item) {
+          return {
+            id: item.id,
+            name: item.name,
+            isCollect: false,
+          };
+        });
+      } else {
+        // 如果不存在
+        songs = JSON.parse(localStorage.getItem("songList"));
+      }
+
+      // 封装渲染数据的函数
+      function renderData(myData) {
+        // 渲染数据到ul中
+        var newStr = myData
+          .map(function (item) {
+            var str = "";
+            str += "<li>";
+            str += "<h2>" + item.name + "</h2>";
+            if (item.isCollect) {
+              str +=
+                '<span data-id="' +
+                item.id +
+                '" class="active">取消收藏</span>';
+            } else {
+              str += '<span data-id="' + item.id + '">未收藏</span>';
+            }
+            str += "</li>";
+            return str;
+          })
+          .join("");
+
+        objUl.innerHTML = newStr;
+      }
+
+      // 初始化调用一次渲染数据的方法
+      renderData(songs);
+
+      // 事件委托
+      objUl.onclick = function (e) {
+        if (e.target.nodeName === "SPAN") {
+          // 获取当前点击span身上自定义属性data-id的值
+          var id = Number(e.target.dataset.id);
+          // 找到对应的数据
+          songs.forEach(function (item, index) {
+            // 判断
+            if (item.id === id) {
+              // 修改对应数据的isCollect属性值
+              songs[index].isCollect = !item.isCollect;
+            }
+          });
+          // 重新渲染
+          renderData(songs);
+
+          // 把数据保存到localStorage中
+          localStorage.setItem("songList", JSON.stringify(songs));
+        }
+      };
+    </script>
+  </body>
+</html>

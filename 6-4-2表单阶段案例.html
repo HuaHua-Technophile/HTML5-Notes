@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>7-21阶段案例</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/4000x2667粉紫色晚霞海边.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+      }
+
+      .all-father {
+        width: 70%;
+        height: 650px;
+        margin: 40px auto;
+        padding: 20px;
+        position: relative;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 0, 43, 0.178),
+          rgba(157, 255, 0, 0.178),
+          rgba(25, 0, 255, 0.178),
+          rgba(162, 0, 255, 0.178)
+        );
+        border-radius: 60px;
+        box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.493);
+      }
+
+      .all-father h1 {
+        text-align: center;
+        margin: 15px 0;
+      }
+
+      .all-father div {
+        margin: 30px 10px;
+      }
+
+      span:not(.remark) {
+        font-size: 18px;
+      }
+
+      .notice {
+        color: red;
+        font-weight: bolder;
+      }
+
+      .remark {
+        position: absolute;
+        left: 76%;
+      }
+
+      div input {
+        height: 30px;
+        width: 35%;
+        font-size: 15px;
+        font-family: "微软雅黑";
+        color: #c8c8c8;
+        position: absolute;
+        left: 40%;
+        padding: 3px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .color {
+        width: 7%;
+      }
+
+      .submit,
+      .reset {
+        font-size: 19px;
+        font-weight: bolder;
+        width: 150px;
+        height: auto;
+        padding: 5px;
+        margin-top: 30px;
+        border-radius: 8px;
+      }
+
+      .submit {
+        left: 25%;
+      }
+
+      .reset {
+        left: 59%;
+      }
+
+      .notice2 {
+        position: absolute;
+        right: 1%;
+        bottom: 0%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="all-father" action="#" method="GET">
+      <h1>练习生报名表</h1>
+      <div>
+        <span>报名好giegie流水线:</span>
+        <input
+          type="text"
+          name="show"
+          value="青(dǎo)春(nǎi)有你第4季"
+          disabled /><!--disabled属性指定文本类型的input内容不可修改-->
+        <span class="remark">(暂无法报名其他流水线)</span>
+      </div>
+      <div>
+        <span>练习生姓名:</span>
+        <input
+          type="text"
+          name="player-name"
+          placeholder="例如:愚景天"
+          pattern="^[\u4E00-\u9FA5]+$"
+          required />
+        <!--正则表达式匹配的是汉字-->
+        <span class="notice">*</span>
+        <span class="remark">(只允许输入汉字)</span>
+      </div>
+      <div>
+        <span>你想伪报的年龄:</span>
+        <input type="number" name="age" min="0" max="29" required />
+        <span class="notice">*</span>
+      </div>
+      <div>
+        <span>捏造出生日期:</span>
+        <input type="date" name="brithday" required />
+        <span class="notice">*</span>
+        <span class="remark">(方便粉丝开庆祝会)</span>
+      </div>
+      <div>
+        <span>电子邮箱:</span>
+        <input
+          type="email"
+          name="email"
+          placeholder="woaicaixukun@gmail.com"
+          required />
+        <span class="notice">*</span>
+        <span class="remark">(请填写无用邮箱,以接收黑粉爆破)</span>
+      </div>
+      <div>
+        <span>美国绿卡/加拿大枫叶卡卡号:</span>
+        <input
+          type="text"
+          name="identity"
+          placeholder="9位数字"
+          pattern="^\d{9}$"
+          required />
+        <span class="notice">*</span>
+      </div>
+      <div>
+        <span>国外电话号码:</span>
+        <input
+          type="tel"
+          name="telphone"
+          placeholder="3位区号+7位随机数"
+          pattern="^\d{10}$"
+          required />
+        <span class="notice">*</span>
+        <span class="remark">(方便造假国外身份)</span>
+      </div>
+      <div>
+        <span>您的微博主页:</span>
+        <input
+          type="url"
+          name="web"
+          list="web"
+          placeholder="http://gdj.beijing.gov.cn/zwxx/gzbg1/202105/t20210506_2381959.html"
+          pattern="^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?$" />
+        <span class="remark">(可选网址)</span>
+        <datalist id="web">
+          <option
+            value="http://gdj.beijing.gov.cn/zwxx/gzbg1/202105/t20210506_2381959.html"></option>
+        </datalist>
+      </div>
+      <div>
+        <span>您喜欢的颜色:</span>
+        <input type="color" class="color" name="color" value="#DA70D6" />
+        <span class="remark">(越sao越好)</span>
+      </div>
+      <div>
+        <input type="submit" class="submit" value="提交练习生信息" />
+        <input type="reset" class="reset" value="重置练习生信息" />
+      </div>
+      <div class="notice2">带<span class="notice">*</span>的为必填项目</div>
+    </form>
+  </body>
+</html>

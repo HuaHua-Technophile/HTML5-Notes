@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-2-5-2optgroup选项分组元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/5616x3744五彩的碎镜装饰.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .vote {
+        text-align: center;
+        margin: auto;
+      }
+
+      p {
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="vote" action="#" method="GET">
+      请选择你要投票的成员：
+      <select name="member">
+        <option hidden>请选择</option>
+        <optgroup label="新日暮里组">
+          <option value="">比利王</option>
+          <option value="">暗黑Van</option>
+          <option value="">自由♂香蕉</option>
+          <option value="">广door♂魔男</option>
+          <option value="">微笑の熏肉</option>
+          <option value="">金银铜铁-地牢四阁</option>
+        </optgroup>
+        <optgroup label="爱豆组">
+          <option value="">郑爽</option>
+          <option value="">菜虚坤</option>
+          <option value="">侾战</option>
+          <option value="">罗志祥</option>
+        </optgroup>
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="投票" />
+    </form>
+    <p>
+      若想要使得下拉菜单中有选项组(选项分组),则需在option之外，套上optgroup标记
+      <br />optgroup需通过lable设置组名，否则组名处为空白(不好看)
+    </p>
+  </body>
+</html>

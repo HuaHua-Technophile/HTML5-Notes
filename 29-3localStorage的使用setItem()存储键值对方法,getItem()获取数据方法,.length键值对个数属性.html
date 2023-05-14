@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>
+      29-3localStorage的使用setItem()存储键值对方法,getItem()获取数据方法,.length键值对个数属性
+    </title>
+  </head>
+  <body>
+    <ol>
+      localStorage 的相关使用方法如下
+      <li>
+        存储数据：使用localStorage.setItem(key,value)方法，传入一个键名和一个值，将数据保存在本地。例如：localStorage.setItem('name','张三')
+      </li>
+      <li>
+        取出数据：使用localStorage.getItem(key)方法，传入一个键名，返回对应的值。如果不存在该键名，返回null。例如：localStorage.getItem('name')
+      </li>
+      <li>
+        localStorage.length属性(只读),用来获取localStorage中包含多少条数据(键值对)
+      </li>
+      <li>localStorage.key()方法,用来获取存储对象中指定索引的键名</li>
+      <li>
+        删除数据：使用localStorage.removeItem(key)方法，传入一个键名，删除对应的数据。例如：localStorage.removeItem('name')
+      </li>
+      <li>
+        清空数据：使用localStorage.clear()方法，清空所有的存储数据。例如：localStorage.clear()
+      </li>
+    </ol>
+    <ol>
+      <li>
+        localStorage存储的数据只能是字符串类型，如果需要存储其他类型的数据，可以使用JSON.stringify()和JSON.parse()方法进行转换
+      </li>
+      <li>
+        localStorage存储的数据只在同源的页面中共享，不会随着HTTP请求发送到服务器端
+      </li>
+    </ol>
+    <script>
+      let user = {
+          name: "张三",
+          age: 18,
+          gender: "male",
+        }, // 定义一个变量
+        arrary = [10, 20, "abc", true]; //定义一个数组
+      localStorage.setItem("user", JSON.stringify(user)); // 将对象转换为字符串,存储到 localStorage的开头
+      localStorage.setItem("arrary", JSON.stringify(arrary)); // 将数组转换为字符串,存储到 localStorage的开头
+      user = JSON.parse(localStorage.getItem("user")); // 取出 localStorage 中的数据(字符串),再将字符串转换为对象;
+      arrary = JSON.parse(localStorage.getItem("arrary")); // 取出 localStorage 中的数据(字符串),再将字符串转换回数组;
+      console.log(user); // 看看是不是和原本的一样
+      console.log(arrary); // 看看是不是和原本的一样
+      console.log(localStorage);
+      console.log(localStorage.length); //.length属性表示localStorage中存储了2个键值对
+      console.log(localStorage.key(0)); //"arrary" 存储顺序是随机的
+      console.log(localStorage.key(1)); //"user" 存储顺序是随机的
+      localStorage.removeItem("user"); // 删除 localStorage 中的user键值对
+      localStorage.clear(); // 清空 localStorage 中的所有数据
+    </script>
+  </body>
+</html>

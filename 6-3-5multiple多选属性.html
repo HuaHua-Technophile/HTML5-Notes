@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-3-5multiple多选属性</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/2561x1943暗色玻璃水珠.jpg) fixed center;
+        background-color: #1e1e1e;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      p {
+        background: rgba(129, 52, 0, 0.185);
+        padding: 8px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="GET">
+      邮箱(可输入多个地址)：
+      <input
+        type="email"
+        name="emails"
+        multiple
+        placeholder="若输入多个,请用逗号隔开" />
+      <br />
+      <br />
+      <br />照片(可选多张):
+      <input type="file" name="photo" multiple />
+      <br />
+      <br />
+      <input type="submit" name="sunmit" value="提交" />
+    </form>
+    <p>
+      multiple属性可用于email类型和file类型的input控件
+      <br />email类型的input，输入多地址只需用逗号","隔开
+      <br />file类型的input，可选择多个文件
+    </p>
+    <p>值得一提的是，multiple属性可以不设置参数值为:"multiple"，也可生效</p>
+  </body>
+</html>

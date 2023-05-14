@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>4-2-1a锚元素(超链接)</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/多色条纹3000x2000.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at bottom right,
+          #00ff0d4f,
+          #ea00ff4f,
+          #008cff4f,
+          #ff99004f,
+          #3cff004f,
+          #ff00004f
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+      #text2 {
+        text-align: center;
+      }
+      a {
+        color: #c8c8c8;
+        font-size: 25px;
+        text-shadow: 0px 0px 5px rgb(81, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text1" id="text2">
+      <a href="https://www.bilibili.com/">国产资源学习网站</a
+      >当前页面打开(target="_blank")
+      <br />
+      <a href="https://cn.bing.com/" target="_blank">搜索”资源“的好法宝</a
+      >新建页面打开(target="_self")
+    </div>
+    <div class="text1">
+      a元素(或称锚元素)可以通过它的href属性,创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他URL的超链接
+      <br />a标签闭合中的内容应该应该指明链接的意图
+      <br />如果存在href属性，当a元素聚焦时按下回车键就会激活它
+    </div>
+    <div class="text1">
+      a元素的target属性指定在何处显示链接的资源
+      <br />取值为标签(tab)窗口(window)，或框架(iframe)等浏览上下文的名称或其他关键词
+      <br />以下关键字具有特殊的意义:
+      <br />_self:当前页面加载，即当前的响应到同一HTML5浏览上下文。此值为默认值
+      <br />_blank:新窗口打开，即到一个新的未命名的HTML5浏览器上下文
+      <br />_parent:加载响应到当前的HTML5浏览上下文的父浏览上下文。如果没有parent框架或者浏览上下文，此选项的行为方式与_self相同
+      <br />_top:HTML5中：加载响应进入顶层浏览上下文(即，浏览上下文，它是当前的一个的祖先，并且没有parent)。如果没有parent框架或者浏览上下文，此选项的行为方式与_self相同
+    </div>
+    <p>
+      a标签除了做跳转，还可做电子邮件链接，你需要在href属性中使用"mailto:"参数，然后跟上电子邮件地址¹⁴。例如：
+      <a href="mailto:example@example.com">Send email to example@example.com</a>
+      这样，当用户点击这个链接时，会打开他们电脑上的默认电子邮件客户端，并建议向这个电子邮件地址发送消息⁴。
+      <br />如果要让电子邮件发送到多个地址，你可以在每个地址之间用逗号分隔¹。例如：
+      <a href="mailto:example1@example.com,example2@example.com"
+        >Send email to example1@example.com and example2@example.com</a
+      >
+    </p>
+    <p>
+      a标签做下载链接的方法是使用download属性¹²。download属性指定了当用户点击超链接时，目标文件（href属性中指定的文件）会被下载¹。
+      <br />download属性的可选值会是文件下载后的新名称¹²。这个值没有限制，浏览器会自动检测正确的文件扩展名并添加到文件中（.img,
+      .pdf, .txt, .html等）²。例如：
+      <a href="/images/myw3schoolsimage.jpg" download="w3logo"
+        >Download w3logo.jpg</a
+      >
+      这样，当用户点击这个链接时，会下载一个名为w3logo.jpg的文件，而不是打开/images/myw3schoolsimage.jpg这个网址²。
+    </p>
+  </body>
+</html>

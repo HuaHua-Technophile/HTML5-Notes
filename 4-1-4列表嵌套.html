@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>4-1-4列表嵌套</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/对称虚幻空间3840x2160.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top left,
+          #ff006a52,
+          #00e1ff52,
+          #645d0052,
+          #64004852,
+          #64520052,
+          #00643252,
+          #64000052
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+
+      ol {
+        background: rgba(212, 0, 255, 0.267);
+        padding: 10px;
+        width: fit-content;
+        margin: 10px auto;
+        border-radius: 10px;
+      }
+
+      .ol_father {
+        width: 50%;
+        box-shadow: 2px 2px 3px black;
+      }
+
+      ul {
+        border-radius: 10px;
+        margin: 10px auto;
+        width: fit-content;
+        padding: 10px;
+        background: rgba(208, 255, 0, 0.267);
+      }
+
+      .li_father {
+        position: relative;
+        left: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ol class="ol_father">
+      <li class="li_father">
+        Java
+        <ul>
+          <li>Intellij</li>
+          <li>Eclipse</li>
+        </ul>
+      </li>
+      <li class="li_father">
+        SQL
+        <ol>
+          <li>MySQL</li>
+          <li>SQL Sever</li>
+          <li>Oracle</li>
+        </ol>
+      </li>
+      <li class="li_father">
+        Html
+        <ul>
+          <li>Vs Code</li>
+          <li>Dreamweaver</li>
+        </ul>
+      </li>
+    </ol>
+    <p class="text1">
+      在html中，不同列表可以进行嵌套
+      <br />如上所示是外层三个ol嵌套内层的两个ul+三个ol+两个ul
+      <br />ol为紫色背景，ul为黄色背景
+    </p>
+  </body>
+</html>

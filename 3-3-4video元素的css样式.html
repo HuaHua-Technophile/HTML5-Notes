@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>3-3-4video元素的css样式</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/茶屋+樱花1920x1080.jpg) fixed center;
+        background-size: cover;
+        color: #1e1e1e;
+      }
+
+      summary {
+        text-align: center;
+        color: #a50000;
+      }
+
+      .p1 {
+        text-align: center;
+        padding: 10px;
+        margin: 5px auto;
+        max-width: fit-content;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 136, 0, 0.301),
+          rgba(0, 255, 64, 0.301),
+          rgba(0, 17, 255, 0.301),
+          rgba(255, 0, 212, 0.301)
+        );
+        border-radius: 30px;
+      }
+
+      .h1 {
+        text-align: center;
+      }
+
+      video {
+        width: 100%;
+        background: rgba(0, 0, 0, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="p1">
+      video元素可被width和height属性设置宽高
+      <br />这样在加载页面时会预先确定视屏的尺寸，使布局不产生变化
+    </p>
+    <details>
+      <summary>点我查看逮虾户</summary>
+      <h1 class="h1">逮虾户 Deja vu!</h1>
+      <video class="video" controls loop>
+        <source src="video/逮虾户 Deja vu ！中英双字幕.mp4" />
+        您的浏览器暂不支持视频控件，请更换浏览器后尝试打开
+      </video>
+    </details>
+  </body>
+</html>

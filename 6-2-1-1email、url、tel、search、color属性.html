@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <title>6-2-1-1email、url、tel、search、color属性</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/5616x3744五彩的碎镜装饰.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      p {
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.301);
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="GET">
+      <!--写POST，点了提交就会405错误，写GET则不会-->
+      该控件只能提交邮箱：
+      <input type="email" name="formmail" />
+      <br />
+      <br />
+      该控件只能提交URL地址(完整网址)：
+      <input type="url" name="user_url" />
+      <br />
+      <br />
+      该控件意为提交电话号码，配合正则表达式使用
+      <input type="tel" name="telphone" pattern="^\d{11}$" />
+      <!--pattern为正则表达式，该正则的含义为11位数字-->
+      <br />
+      <br />
+      该控件用于提交搜索关键词
+      <input type="search" name="searchinfo" />
+      <br />
+      <br />
+      这两个控件用于在网页中选取颜色
+      <input type="color" name="Purple" value="#800080" />
+      <input type="color" name="Pink" value="#FFC0CB" />
+      <input type="submit" value="提交" />
+    </form>
+    <p>建议尝试输入不符合条件的文本，以了解各控件</p>
+  </body>
+</html>

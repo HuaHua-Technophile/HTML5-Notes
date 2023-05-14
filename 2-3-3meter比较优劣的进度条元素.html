@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>2-14meter比较优劣的进度条元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/水体附近的高层建筑3717x5672.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top right,
+          #ae00ff57,
+          #00ffb357,
+          #006eff57,
+          #00ff0d57,
+          #ff000057
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>学生发际线危险度列表</h1>
+    <p>
+      张小三：
+      <meter
+        value="10"
+        max="100"
+        low="60"
+        high="80"
+        optimum="0"
+        title="没用功学习"></meter>
+      <br />李小四：
+      <meter
+        value="60"
+        max="100"
+        low="59"
+        high="80"
+        optimum="0"
+        title="正常的学习"></meter>
+      <br />陈小华：
+      <meter
+        value="90"
+        max="100"
+        low="60"
+        high="80"
+        optimum="0"
+        title="发量换前途"></meter>
+    </p>
+    <div class="text1">
+      min属性定义最小值。它必须比最大值要小。默认为0
+      <br />max属性定义最大值。它必须比最小值要大。默认为1
+      <br />value属性定义当前的数值。默认值即为0。若给定的值不在最小值和最大值之间，它的值就等于它最接近的一端的值
+      <br />low属性定义了低值区间的上限值（value落在[min,low][high,max]等不同的区间会使浏览器渲染该元素时出不同的视觉效果）
+      <br />它必须比最小值属性大，并且不能超过high值和最大值。未设置或者比最小值还要小时，其值即为最小值
+      <br />high属性定义了高值区间的下限值。它必须小于最大值，同时必须大于low值和最小值。若没有设置，或者比最大值还大，其值即为最大值
+      <br />optimum属性用来指示最优值。它必须在正确的值域内（由最小/大值属性定义）当使用了low和high属性时，它指明哪一个取值范围是更好的。假设它介于最小值和low之间，那么lower区间就被认为是更佳的取值范围
+      <br />form属性将本元素与对应的form元素关联。例如，一个计量器可能用来显示某个数值输入框（input元素，number类型）的范围。只有当计量器元素被用作表单关联的元素时，该属性才应当被使用。即便如此，若它作为表单的后代元素出现，它仍然有可能被省略
+    </div>
+  </body>
+</html>

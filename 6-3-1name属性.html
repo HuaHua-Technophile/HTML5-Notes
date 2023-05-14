@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-3-1name属性.html</title>
+  </head>
+  <body>
+    <p>
+      form表单的name属性是用来为表单设置一个唯一的标识符，以便在脚本中引用表单或者提交表单数据时区分各个表单
+    </p>
+    <p>
+      form表单的name属性的语法是：&lt;form name="name"&gt;...&lt;/form&gt;
+      <br />其中，name是一个字符串，不能包含空格或特殊字符。³
+    </p>
+    <script>
+      function submitForm(formName) {
+        var form = document.forms[formName];
+        form.submit();
+      }
+    </script>
+    <form name="myForm" action="/action_page.php" method="post">
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" /><br />
+      <label for="email">邮箱：</label>
+      <input type="email" id="email" name="email" /><br />
+      <button type="button" onclick="submitForm('myForm')">提交</button>
+    </form>
+    <p>
+      这个示例代码创建了一个包含两个文本输入域和一个按钮的表单。<br />当用户点击按钮时，会调用一个自定义的脚本函数，根据表单的name属性找到对应的表单对象，并提交表单数据到/action_page.php页面。
+    </p>
+  </body>
+</html>

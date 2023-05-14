@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-2-3textarea多行文本输入框元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/1920x2880光散射金属块.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .comment {
+        display: block;
+        margin: 20px auto;
+        /*textarear实现居中，可以使用text-align:center，因其为行内元素
+            无法使用margin进行操作，需要使用display:block;
+            之后才可以使用margin进行操作。*/
+        padding: 10px;
+        color: #c8c8c8;
+        font-family: "微软雅黑";
+        /*设置textarea控件中，字体的样式*/
+        width: 70%;
+        /*设置textarea控件的宽度*/
+        background: linear-gradient(
+          45deg,
+          rgba(255, 0, 43, 0.178),
+          rgba(157, 255, 0, 0.178),
+          rgba(25, 0, 255, 0.178),
+          rgba(162, 0, 255, 0.178)
+        );
+        border-radius: 20px;
+      }
+
+      p {
+        padding: 13px;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 0, 43, 0.178),
+          rgba(157, 255, 0, 0.178),
+          rgba(25, 0, 255, 0.178),
+          rgba(162, 0, 255, 0.178)
+        );
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="GET">
+      <textarea
+        class="comment"
+        name="comment"
+        cols="30"
+        rows="10"
+        placeholder="请输入您的评论">
+评论区</textarea
+      >
+      <br />
+      <input type="submit" value="提交" />
+    </form>
+    <p>
+      textarea元素可以输入大量的信息，不再像input元素局限于单行文本
+      <br />属性值clos用于设置每一行的长度 <br />rows用于显示该文本框显示的行数
+      <br />上方示例控件，配合了css用于设定大小。还设置了placeholder属性，显示占位符提示信息“请输入您的评论”
+    </p>
+  </body>
+</html>

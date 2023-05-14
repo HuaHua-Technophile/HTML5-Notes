@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>1-4-5section分节分块元素.html</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/黄色方块3000x1600.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top right,
+          #ae00ff57,
+          #00ffb357,
+          #006eff57,
+          #00ff0d57,
+          #ff000057
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+
+      .section1 {
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.226);
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section1">
+      <h2>section元素</h2>
+    </section>
+    <p class="text1">
+      元素表示区块，用于标识文档中的节，多用于对内容进行分区。
+    </p>
+    <p class="text1">
+      从语义上讲，section标记的是页面中的特定区域，而div不传达任何语义。
+      <br />当一个容器元素需要被直接定义样式或通过脚本定义行为时，不应该使用section。可以使用div
+      <br />该元素并非普通的容器元素
+    </p>
+    <p class="text1">
+      若artcle元素、aside元素、nav元素更适合使用条件
+      <br />就不要使用section元素
+    </p>
+  </body>
+</html>

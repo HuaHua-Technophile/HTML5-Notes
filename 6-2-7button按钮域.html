@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-2-7button按钮域</title>
+  </head>
+  <body>
+    <p>
+      button按钮域是一种在表单中用于触发某些操作的表单控件。它可以用于提交表单，重置表单，或者执行自定义的脚本函数。¹²
+      <br />button按钮域的基本语法是：&lt;button type="type" name="name"
+      value="value"&gt;text&lt;/button&gt;
+      <br />其中，type属性用于指定按钮的类型，可以是submit（提交表单），reset（重置表单），或者button（自定义操作）。name属性用于指定按钮的名称，value属性用于指定按钮的值，text是按钮上显示的文本。¹³
+    </p>
+    <form>
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" /><br />
+      <label for="email">邮箱：</label>
+      <input type="email" id="email" name="email" /><br />
+      <button type="submit" formaction="/action_page.php">提交</button>
+      <button type="reset">重置</button>
+      <button type="button" onclick="alert('Hello')">点击我</button>
+    </form>
+  </body>
+</html>

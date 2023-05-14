@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-3-7autofocus自动获得焦点属性</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/2561x1943暗色玻璃水珠.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .Bing {
+        width: 50%;
+        margin: 20px auto;
+        text-align: center;
+        background: linear-gradient(
+          90deg,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          violet
+        );
+        opacity: 0.9;
+        padding: 20px 15px 10px 15px;
+        border-radius: 50px;
+      }
+
+      .Bing strong {
+        font-size: 30px;
+        color: black;
+      }
+
+      p {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.404);
+        padding: 15px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="Bing" action="#" method="GET">
+      <strong>Microsoft Bing：</strong>
+      <input type="search" name="Bing" autofocus />
+      <!--未设置参数值，也能生效-->
+      <br />
+      <br />
+      <input type="submit" name="submit" value="搜索" />
+    </form>
+    <p>
+      上面的input控件被设置了“autofocus”属性
+      <br />但并未设置其参数值为“autofocus”，该属性也能生效
+      <br />因此，每当页面重新加载时，该输入框便会自动获得页面焦点
+    </p>
+  </body>
+</html>

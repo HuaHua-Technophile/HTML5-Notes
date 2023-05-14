@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>7-20表单css样式</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/4000x2667粉紫色晚霞海边.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      #stu_log_in {
+        width: 50%;
+        height: 149px;
+        padding: 17px 3%;
+        margin: auto;
+        border: black 1px solid;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 0, 43, 0.178),
+          rgba(157, 255, 0, 0.178),
+          rgba(25, 0, 255, 0.178),
+          rgba(162, 0, 255, 0.178)
+        );
+        border-radius: 50px;
+      }
+
+      form p {
+        text-align: center;
+        margin-top: 3%;
+      }
+
+      form p span {
+        font-size: 23px;
+      }
+
+      .stu_name,
+      .password {
+        background: #00000000;
+        width: 50%;
+        height: 23px;
+        padding: 4px 0 0 0;
+        /*此内边距值可尽量显得input元素与文本齐平*/
+        border: none;
+        /*相当于清除边框样式*/
+        border-radius: 6px;
+        box-shadow: 2px 2px 6px rgba(0, 255, 255, 0.5);
+        /*5-11盒子阴影*/
+        color: #c8c8c8;
+      }
+
+      .fake_submit1,
+      .fake_submit2 {
+        font-size: 17px;
+        color: #ff4848;
+        width: 140px;
+        height: 27px;
+        padding: 0;
+        margin: 0 5%;
+        border-radius: 10px;
+        border: 2px black solid;
+        background: rgba(0, 0, 0, 0.507);
+      }
+
+      .log_in {
+        color: #c8c8c81a;
+        font-size: 1px;
+        padding: 0;
+        margin: 0;
+        width: 27px;
+        height: 17px;
+        background: rgba(0, 0, 0, 0);
+        border: #00000000;
+        position: absolute;
+        left: 49%;
+        top: 177px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="GET" id="stu_log_in">
+      <p>
+        <span>考生姓名：</span>
+        <input type="text" class="stu_name" name="stu_name" list="name" />
+        <datalist id="name">
+          <optgroup label="免试直通生">
+            <option value="郑爽"></option>
+            <option value="菜虚坤"></option>
+            <option value="侾战"></option>
+            <option value="罗志祥"></option>
+          </optgroup>
+        </datalist>
+      </p>
+      <p>
+        <span>八位考号：</span>
+        <input
+          type="password"
+          class="password"
+          name="password"
+          placeholder="2英文+6数字，以“sb”开头"
+          pattern="^sb[0-9]{6}$" />
+      </p>
+      <p>
+        <input
+          type="submit"
+          class="fake_submit1"
+          name="fake_submit1"
+          value="注销考生账号" />
+        <input
+          type="submit"
+          class="fake_submit2"
+          name="fake_submit2"
+          value="放弃考试资格" />
+      </p>
+    </form>
+    <input
+      type="submit"
+      class="log_in"
+      name="log_in"
+      form="stu_log_in"
+      value="登陆" />
+  </body>
+</html>

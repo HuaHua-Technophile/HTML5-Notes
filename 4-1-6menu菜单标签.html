@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>4-1-6menu菜单标签</title>
+    <style>
+      command {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background: #0000006b;
+      }
+    </style>
+  </head>
+  <body>
+    <menu>
+      <command type="radio" radiogroup="sex" label="男士">男</command>
+      <command type="radio" radiogroup="sex" label="女士">女</command>
+    </menu>
+    <p>
+      HTML5的menu标签用于定义一组命令。它可以用于创建上下文菜单、工具栏、列出表单控件和命令¹²。
+      <br />一个上下文菜单由一个menu元素组成，它包含了每个可选项的menuitem元素(仅firefox支持)，以及用hr元素将菜单的内容分隔成带有分隔线的不同部分¹。
+      <br />一个工具栏菜单由一个menu元素组成，它包含了一些按钮或链接¹。
+      <br />mune的label属性：定义菜单的可见标签
+      <br />type属性：定义要显示哪种菜单类型。
+      <br />----list：默认值，定义列表菜单。 <br />----context：定义上下文菜单。
+      <br />----toolbar：定义工具栏菜单。活动式命令，允许用户立即与命令进行交互。
+      <!-- 上下文菜单 -->
+      <menu type="context" id="myContextMenu">
+        <menuitem label="Copy" onclick="copyText()"></menuitem>
+        <hr />
+        <menuitem label="Paste" onclick="pasteText()"></menuitem>
+      </menu>
+      <!-- 工具栏菜单 -->
+      <menu type="toolbar" id="myToolbarMenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </menu>
+      源: 与必应的对话， 2023/3/6(1) HTML menu Tag - W3docs.
+      https://www.w3docs.com/learn-html/html-menu-tag.html 访问时间 2023/3/6.
+      <br />(2) Menu HTML - W3schools. https://www.w3schools.blog/menu-html
+      访问时间 2023/3/6. <br />(3) HTML menu Tag - W3docs.
+      https://www.w3docs.com/learn-html/html-menu-tag.html 访问时间 2023/3/6.
+      <br />(4) : The Menu element - HTML: HyperText Markup Language | MDN -
+      Mozilla. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu
+      访问时间 2023/3/6. <br />(5) REMOVED FROM HTML5 - W3Schools.
+      https://www.w3schools.com/TAGS/tag_menu.asp 访问时间 2023/3/6.
+    </p>
+  </body>
+</html>

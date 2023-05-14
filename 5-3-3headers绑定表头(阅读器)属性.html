@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>5-3-3headers绑定表头(阅读器)属性</title>
+  </head>
+  <body>
+    <p>
+      headers属性是HTML中用于给表格单元格指定一个或多个相关的表头单元格的属性¹²³。它可以用在td或th元素上，也可以用scope属性来代替⁵。
+    </p>
+    <p>
+      headers属性的作用是让使用屏幕阅读器的人能够获取表格单元格和表头单元格之间的关系，而不是显示在视觉上¹²³。它在表格结构复杂的情况下很有用，比如当表格单元格与多个行或列标题相关联时²³。
+    </p>
+    <p>
+      headers属性的值是一个或多个表头单元格的id属性，如果有多个id，它们之间用空格分隔¹²³。
+    </p>
+    <table>
+      <tr>
+        <th id="name">Name</th>
+        <th id="age">Age</th>
+        <th id="gender">Gender</th>
+      </tr>
+      <tr>
+        <td headers="name">Alice</td>
+        <td headers="age">20</td>
+        <td headers="gender">Female</td>
+      </tr>
+      <tr>
+        <td headers="name">Bob</td>
+        <td headers="age gender">25 (Male)</td>
+        <!-- This cell is related to both age and gender header cells -->
+        <!-- No need to specify a cell for gender here -->
+      </tr>
+    </table>
+    这样，会创建一个有headers属性的表格，它们指定了每个数据单元格与哪些表头单元格相关联³。
+  </body>
+</html>

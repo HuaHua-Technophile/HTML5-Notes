@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>4-1-2ol有序列表元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/科技蜂巢7860x4320.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top left,
+          #ff006a52,
+          #00e1ff52,
+          #645d0052,
+          #64004852,
+          #64520052,
+          #00643252,
+          #64000052
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+
+      .ol1,
+      .ol2 {
+        margin: 30px auto;
+        padding: 10px;
+        background: #00ff9d5d;
+        border-radius: 40px;
+        box-shadow: 2px 2px 3px black;
+      }
+
+      li {
+        position: relative;
+        left: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ol class="ol1" start="99" reversed>
+      <!--有序列表，reversed表示倒叙-->
+      <li>苹果</li>
+      <li>香蕉</li>
+      <li>橘子</li>
+      <li>柠檬</li>
+    </ol>
+    <ol class="ol2" start="99" type="I">
+      <li>苹果</li>
+      <li>香蕉</li>
+      <li>橘子</li>
+      <li>柠檬</li>
+    </ol>
+    <p class="text1">
+      ol元素表示有序列表，通常渲染为一个带编号的列表
+      <br />start属性可以指定有序列表的起始值
+      <br />type属性可以指定列表中使用的标记类型
+      <br />如上所示则是两个有序列表，前者设置了reversed属性，表示倒叙
+    </p>
+  </body>
+</html>

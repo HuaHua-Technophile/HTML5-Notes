@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>5-2-1rules、frame：单元格、表格样式属性</title>
+  </head>
+  <body>
+    <p>
+      rules和frame是HTML中用于定义表格边框样式的属性。它们都可以用在table元素上，不过我建议用CSS来代替¹。
+      <br />rules属性指定了表格内部的水平和垂直线条的显示方式。它有以下几个可能的值：
+      <br />- none：不显示任何线条。 <br />-
+      groups：只显示行组和列组之间的线条。 <br />- rows：只显示行之间的线条。
+      <br />- cols：只显示列之间的线条。 <br />- all：显示所有的线条。
+    </p>
+    <p>
+      <br />frame属性指定了表格外部的四个边框的显示方式。它有以下几个可能的值：
+      <br />- void：不显示任何边框。 <br />- above：只显示上边框。 <br />-
+      below：只显示下边框。 <br />- hsides：只显示上下两个边框。 <br />-
+      vsides：只显示左右两个边框。 <br />- lhs：只显示左边框。 <br />-
+      rhs：只显示右边框。 <br />- box或border：都表示显示四个边框。
+    </p>
+    <table border="5" rules="rows" frame="hsides">
+      <tr>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+      </tr>
+    </table>
+    <p>
+      这样，会创建一个有5像素宽度的外部上下两个边框，以及内部行之间的线条，但没有列之间或行组和列组之间的线条的表格³。
+    </p>
+  </body>
+</html>

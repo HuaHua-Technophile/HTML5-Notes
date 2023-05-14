@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>5-2-2cellspacing格间距属性、cellpadding内间距属性</title>
+    <style>
+      :root {
+        background: #181a1b;
+        color: #c8c8c8;
+      }
+      table {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table border="20" cellpadding="20" cellspacing="20">
+      <tr>
+        <td>属性名</td>
+        <td>含义</td>
+        <td>默认值</td>
+      </tr>
+      <tr>
+        <td>border</td>
+        <td>设置表格边框</td>
+        <td>0(无边框)</td>
+      </tr>
+      <tr>
+        <td>cellspacing</td>
+        <td>设置每个单元格之间的间距(不可在css中使用margin代替)</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>cellpadding</td>
+        <td>设置单元格内容与边框之间的内间距(建议在css中使用padding代替)</td>
+        <td>1</td>
+      </tr>
+    </table>
+  </body>
+</html>

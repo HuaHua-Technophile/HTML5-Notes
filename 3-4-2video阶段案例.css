@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  color-scheme: dark !important;
+}
+body {
+  height: 100vh;
+  background: url(./img/你的名字1920x1080.jpg) fixed;
+  background-size: cover;
+  color: #c8c8c8;
+  overflow: hidden;
+}
+#player {
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#player > video {
+  width: 100%;
+}
+#controls {
+  display: flex;
+  align-items: center;
+  width: 94%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+}
+#controls #PlayBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #ffc0cb !important;
+}
+#controls #PlayBtn > div {
+  border-left: 14px #a63e51 solid;
+  border-top: 9px transparent solid;
+  border-bottom: 9px transparent solid;
+  transition: all 0.5s;
+}
+#controls #PlayBtn.Play > div {
+  height: 18px;
+  width: 5px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left: 5px #a63e51 solid;
+  border-right: 5px #a63e51 solid;
+}
+#controls #progress {
+  flex: 1; /*自动填充宽度*/
+  height: 10px;
+  margin: 0 20px;
+  border-radius: 99999px;
+  overflow: hidden;
+  box-shadow: 3px 2px 10px #a63e51;
+}
+#controls #progress > div {
+  height: 100%;
+}
+#controls #progress #loaded {
+  background: pink;
+  transition: width 0.2s linear;
+}
+#Full_screen {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border: #ffc0cb solid 3px;
+  border-radius: 5px;
+  position: relative;
+}
+#Full_screen::before,
+#Full_screen::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+
+  border-top: #a63e51 3px solid;
+  border-left: #a63e51 3px solid;
+}
+#Full_screen::before {
+  top: 2px;
+  left: 2px;
+}
+#Full_screen::after {
+  right: 2px;
+  bottom: 2px;
+  transform: rotateZ(180deg);
+}
+#cd {
+  width: 300px;
+  opacity: 0.5;
+  border-radius: 999999px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  animation: 前前前世cd 10s linear infinite;
+  pointer-events: none; /* 点击穿透 */
+}
+@keyframes 前前前世cd {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#Lyrics {
+  height: 300px;
+  width: 400px;
+  padding: 5px;
+  border-radius: 19px;
+  background: linear-gradient(0deg, #000000a8, #00000000);
+  text-align: center;
+  overflow: scroll;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+#Lyrics::-webkit-scrollbar {
+  display: none; /*隐藏滚动条*/
+}
+#Lyrics > ul > li {
+  list-style: none;
+  user-select: none; /*避免文本选中*/
+  min-height: 1.2rem; /*空li也要占据一行*/
+}
+#Lyrics > ul > li.play {
+  color: white;
+  text-shadow: 0 0 5px white;
+}
+#audio {
+  width: 100%;
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-1-1form创建表单</title>
+    <style type="text/css">
+      :root {
+        background: #1e1e1e;
+        color: #c8c8c8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="GET">
+      账号：
+      <input type="text" name="user" /> 密码：
+      <input type="password" name="password1" />
+      <input type="submit" value="提交" />
+    </form>
+    <p>action属性处理表单提交的URL，该属性会被其他表单控件覆盖</p>
+    <p>
+      method属性表示：浏览器使用这种 HTTP 方式来提交 表单。可能的值有：
+      <br />post：指的是 HTTP POST
+      方法；表单数据会包含在表单体内然后发送给服务器 <br />get：指的是 HTTP GET
+      方法；表单数据会附加在 action 属性的 URL 中，并以 '?'
+      作为分隔符，没有副作用 时使用这个方法 <br />dialog：如果表单在 dialog
+      元素中，提交时关闭对话框。
+    </p>
+  </body>
+</html>

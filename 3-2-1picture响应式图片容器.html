@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>3-2-1picture响应式图片容器</title>
+    <style>
+      img {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      HTML中的picture标签是一个容器元素，用于在不同的设备上显示不同的图片，一般用于响应式设计²
+      picture标签<strong>可以</strong>包含多个source标签和一个img标签，每个source标签可以指定一个或多个图片资源，以及相应的media和type属性，用于匹配不同的屏幕尺寸、分辨率、方向等条件³。浏览器会根据这些条件选择最合适的图片资源来加载，并显示在img标签中。如果没有匹配到任何source标签或浏览器不支持picture标签，则会使用img标签的src属性作为默认图片²。所以建议搭配一个img标签进行“保底”
+      例如，以下代码演示了如何根据屏幕宽度显示不同大小的图片：
+    </p>
+    <picture>
+      <source media="(min-width: 800px)" srcset="./img/多色条纹3000x2000.jpg" />
+      <source media="(min-width: 450px)" srcset="./img/夜晚群山4400x2600.jpg" />
+      <img src="./img/favicon.ico" alt="示例图片" />
+    </picture>
+    <p>
+      当屏幕宽度大于等于800px时，浏览器会加载多色条纹3000x2000.jpg；当屏幕宽度大于等于450px且小于800px时，浏览器会加载夜晚群山4400x2600.jpg；当屏幕宽度小于450px或浏览器不支持picture元素时，浏览器会加载favicon.ico³。
+    </p>
+    <picture>
+      <source
+        media="(orientation: portrait)"
+        srcset="./img/多色条纹3000x2000.jpg" />
+      <source
+        media="(orientation: landscape)"
+        srcset="./img/夜晚群山4400x2600.jpg" />
+      <img src="./img/favicon.ico" alt="Image" />
+    </picture>
+    <p>当屏幕横向和纵向时展示不同的图片</p>
+    <picture>
+      <source
+        srcset="./img/橙黄色星云4961x3908.jpg"
+        media="(min-resolution: 2dppx)" />
+      <source
+        srcset="./img/多色条纹3000x2000.jpg"
+        media="(min-resolution: 1dppx)" />
+      <img src="./img/favicon.ico" alt="A responsive image" />
+    </picture>
+
+    <p>当屏幕像素密度不同时展示不同的图片</p>
+    <p>
+      希望这些信息对你有帮助。👍 源: 与必应的对话， 2023/3/3 <br />
+      (1) HTML picture元素 |
+      菜鸟教程.https://www.runoob.com/tags/tag-picture.html 访问时间 2023/3/3.
+      <br />
+      (2) picture：picture 元素 - HTML（超文本标记语言） | MDN.
+      https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/picture 访问时间
+      2023/3/3. <br />
+      (3) HTML 图像 | 菜鸟教程. https://www.runoob.com/html/html-images.html
+      访问时间 2023/3/3.
+    </p>
+  </body>
+</html>

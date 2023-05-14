@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>5-3-4表格跨行跨列案例</title>
+    <style>
+      :root {
+        background: #000;
+      }
+      table {
+        margin: 50px;
+        text-align: center;
+        border-collapse: collapse;
+        /* 合并边框 */
+        color: white;
+      }
+      .table1 {
+        height: 600px;
+        width: 800px;
+        table-layout: fixed;
+      }
+      .table2 *:not(caption) {
+        border: 1px solid white;
+        min-width: 60px;
+      }
+      .table3 {
+        box-sizing: border-box;
+      }
+      .table3 td {
+        border: 1px solid white;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <table style="border: 2px #dc7aff solid" class="table1">
+      <tbody>
+        <tr>
+          <td style="border: 2px #dc7aff solid" colspan="8"></td>
+        </tr>
+        <tr>
+          <td style="border: 2px #dc7aff solid" colspan="4" rowspan="2"></td>
+          <td style="border: 2px #dc7aff solid"></td>
+          <td style="border: 2px #dc7aff solid" colspan="3"></td>
+        </tr>
+        <tr>
+          <td style="border: 2px #dc7aff solid" colspan="4"></td>
+        </tr>
+        <tr>
+          <td style="border: 2px #dc7aff solid"></td>
+          <td style="border: 2px #dc7aff solid" colspan="3"></td>
+          <td style="border: 2px #dc7aff solid" colspan="4" rowspan="3"></td>
+        </tr>
+        <tr height="200">
+          <td style="border: 2px #dc7aff solid" colspan="2" rowspan="2"></td>
+          <td style="border: 2px #dc7aff solid" rowspan="2"></td>
+          <td style="border: 2px #dc7aff solid" rowspan="2"></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- 表格2-------------------------- -->
+    <table class="table2">
+      <caption>
+        面试登记表
+      </caption>
+      <tr>
+        <td colspan="2">填表日期</td>
+        <td></td>
+        <td colspan="2"></td>
+        <td>岗位名称</td>
+        <td></td>
+        <td rowspan="5">照片</td>
+      </tr>
+      <tr>
+        <td>姓名</td>
+        <td></td>
+        <td>出生日期</td>
+        <td colspan="2"></td>
+        <td>性别</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="5">基本资料</td>
+        <td>邮箱</td>
+        <td colspan="3"></td>
+        <td>现居地址</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>微信</td>
+        <td colspan="3"></td>
+        <td>户籍地</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>身份证号码</td>
+        <td colspan="2"></td>
+        <td>手机</td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td>专业</td>
+        <td colspan="2"></td>
+        <td>紧急联系人</td>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <td>学历</td>
+        <td colspan="2"></td>
+        <td>婚姻状况</td>
+        <td colspan="3"></td>
+      </tr>
+      <tr height="">
+        <td rowspan="3">教育情况</td>
+        <td colspan="2">时间</td>
+        <td colspan="2">学校</td>
+        <td colspan="3">专业</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+        <td colspan="2"></td>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+        <td colspan="2"></td>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <td rowspan="6">面试人</td>
+        <td colspan="2">评分项</td>
+        <td colspan="2">分数</td>
+        <td colspan="3" rowspan="6">评价</td>
+      </tr>
+      <tr>
+        <td colspan="2">仪表</td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2">表达能力</td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2">反应能力</td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2">相关经验</td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="4">总分60以下不得录用</td>
+      </tr>
+      <tr>
+        <td rowspan="2">工作安排</td>
+        <td rowspan="2">结果(打勾)</td>
+        <td>不录用</td>
+        <td></td>
+        <td>部门</td>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <td>录用</td>
+        <td></td>
+        <td>上岗时间</td>
+        <td colspan="3"></td>
+      </tr>
+    </table>
+    <table class="table3">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td rowspan="3">1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td rowspan="2">1</td>
+        <td rowspan="2">1</td>
+      </tr>
+      <tr></tr>
+    </table>
+  </body>
+</html>

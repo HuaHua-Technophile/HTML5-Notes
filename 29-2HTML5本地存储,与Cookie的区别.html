@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>29-2HTML5本地存储,与Cookie的区别</title>
+  </head>
+  <body>
+    <p>
+      HTML5本地存储是一种在用户浏览器中存储数据的技术，它有两种对象：window.localStorage和window.sessionStorage
+      <br />localStorage存储的数据没有截止日期，即使浏览器关闭也不会丢失，而sessionStorage存储的数据只在一个session中有效，当浏览器标签页关闭时数据会被删除
+      <br />HTML5本地存储比cookie更安全，更高效，可以存储更多的数据
+      <br />要使用HTML5本地存储，需要检测浏览器是否支持Storage对象，并使用setItem和getItem方法来存储和取回数据
+    </p>
+    <ol>
+      HTML5本地存储和cookie的区别主要有以下几点:
+      <li>
+        存储大小不同。HTML5本地存储的容量一般为5M左右，而cookie的容量一般为4K左右，受到浏览器的限制。
+      </li>
+      <li>
+        存储位置不同。HTML5本地存储只保存在客户端，不会随着HTTP请求发送到服务器端，而cookie会保存在HTTP请求的头部，每次请求都会携带，增加了网络流量和安全风险。
+      </li>
+      <li>
+        作用域不同:localstorage在同一个浏览器的不同窗口中都是共享的；sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；cookie也是在所有同源窗口中都是共享的
+      </li>
+      <li>
+        存储方式不同。HTML5本地存储有两种对象：localStorage和sessionStorage，前者是永久性的，后者是会话级别的，关闭浏览器后就消失。而cookie需要设置过期时间，如果没有设置，默认是关闭浏览器后失效。
+      </li>
+      <li>cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下</li>
+      <li>
+        存取方式不同。HTML5本地存储有现成的API接口可以使用，如setItem,getItem,removeItem等，而cookie需要自己封装函数来操作。
+      </li>
+    </ol>
+  </body>
+</html>

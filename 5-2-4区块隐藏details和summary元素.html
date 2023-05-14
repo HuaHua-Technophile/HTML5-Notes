@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>5-2-4区块隐藏details和summary元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/黄色方块3000x1600.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top right,
+          #ae00ff57,
+          #00ffb357,
+          #006eff57,
+          #00ff0d57,
+          #ff000057
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+
+      * {
+        color: #c8c8c8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <details>
+      <summary>点我(summary元素)打开隐藏区块</summary>
+      <ul>
+        <li>
+          <a href="#"
+            >点我前往彩虹干员深夜激情战术反恐热线，性感猛男-在线反恐</a
+          >
+        </li>
+        <li><a href="#">点我查看性价比杠杠的华为手机</a></li>
+      </ul>
+    </details>
+    <p class="text1">
+      details元素可创建一个挂件。仅在被切换成展开状态时，它才会显示内含的信息
+      <br />summary属性是HTML中用于给表格提供一个内容概要的属性¹²⁴。它可以用在table元素上，也可以用aria-describedby属性来代替⁶。
+      <br />summary属性的作用是让使用屏幕阅读器的人能够获取表格的信息，而不是显示在视觉上¹²⁴。它在表格结构复杂的情况下很有用，比如当表格有多个行或列标题，或者有多个行或列分组时¹³⁴。
+      <br />
+      <br />作为details的第一个子元素时,将会成为标题
+      <br />当用户单击标题时，会显示或隐藏details的内容
+    </p>
+  </body>
+</html>

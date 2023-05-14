@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>花花</title>
+  </head>
+
+  <body>
+    <p>
+      <input type="email" />
+    </p>
+
+    <p>
+      <label> <input type="checkbox" />记住用户邮箱 </label>
+    </p>
+
+    <p>
+      <button>提交</button>
+    </p>
+
+    <script>
+      // 获取相关dom对象
+      var btn = document.querySelector("button");
+      var myEmail = document.querySelector("input[type='email']");
+      var myCheckbox = document.querySelector("input[type='checkbox']");
+
+      btn.onclick = function () {
+        // 获取输入的email
+        var myEmailVal = myEmail.value;
+
+        // 判断复选框是否选中
+        if (myCheckbox.checked) {
+          // 如果选中, 设置7天有效期的cookie
+          var d = new Date();
+          d.setTime(d.getTime() + 7 * 3600 * 24 * 1000);
+          var expiresTime = d.toGMTString();
+          document.cookie = "email=" + myEmailVal + "; expires=" + expiresTime;
+        } else {
+          // 如果不选中, 删除对应的cookie
+          document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+      };
+
+      // 一打开页面,如果存在对应的cookie数据, 填充邮箱框, 选中复选框
+      // console.log( document.cookie );
+      if (document.cookie.length === 0) {
+        var obj = {};
+      } else {
+        var arr = document.cookie.split("; ");
+        var obj = {};
+        arr.forEach(function (item) {
+          var keyName = item.split("=")[0];
+          var keyVal = item.split("=")[1];
+          obj[keyName] = keyVal;
+        });
+      }
+      if (obj.email !== undefined) {
+        myEmail.value = obj.email;
+        myCheckbox.checked = true;
+      } else {
+        myEmail.value = "";
+        myCheckbox.checked = false;
+      }
+    </script>
+  </body>
+</html>

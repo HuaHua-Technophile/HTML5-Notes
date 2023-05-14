@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-3-9提交按钮的表单重写</title>
+  </head>
+  <body>
+    <p>
+      表单重写是指重写form元素的某些属性设定，比如enctype、method、action等。表单重写属性适用于提交按钮（input的button和直接的button都可以），可以在提交按钮上添加formenctype、formmethod、formaction等属性来覆盖form元素的默认属性。这样可以实现在同一个表单中使用不同的提交方式或目标路径。
+    </p>
+    <form action="text.php" method="post">
+      <input type="text" name="name" placeholder="请输入姓名" />
+      <input type="submit" value="提交文本数据" />
+      <input type="file" name="file" />
+      <input
+        type="submit"
+        value="上传文件"
+        formenctype="multipart/form-data"
+        formaction="file.php" />
+    </form>
+    <p>
+      当你点击“提交文本数据”按钮时，会使用post方法将文本数据发送到默认的text.php；<br />当你点击“上传文件”按钮时，会使用重写在提交按钮里的multipart/form-data编码格式将文件数据发送到file.php。
+    </p>
+  </body>
+</html>

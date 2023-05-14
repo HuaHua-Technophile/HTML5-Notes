@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>2-2-1strong、em强调</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/多色条纹3000x2000.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top left,
+          #ff006a52,
+          #00e1ff52,
+          #645d0052,
+          #64004852,
+          #64520052,
+          #00643252,
+          #64000052
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="text1">我是正常显示的文本</p>
+    <p class="text1"><b>我是使用b元素定义的加粗文本</b></p>
+    <p class="text1"><strong>我是使用strong元素定义的强调文本</strong></p>
+    <p class="text1"><i>我是使用i元素定义的倾斜文本</i></p>
+    <p class="text1"><em>我是使用em元素定义的强调文本</em></p>
+    <p class="text1"><del>我是使用del元素定义的删除线文本</del></p>
+    <p class="text1"><ins>我是使用ins元素定义的下划线文本</ins></p>
+  </body>
+</html>

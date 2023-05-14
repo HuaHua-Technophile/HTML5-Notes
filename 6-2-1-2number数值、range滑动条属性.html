@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-2-1-1number数值、range滑动条属性</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/2561x1943暗色玻璃水珠.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+      p {
+        background: rgba(114, 111, 240, 0.3);
+        border-radius: 30px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="GET">
+      <input
+        type="number"
+        name="number1"
+        value="996"
+        max="999"
+        min="-999"
+        step="10" />
+      <!--step参数值可以理解为小三角中每次调整的值-->
+      <br />
+      <br />
+      <input type="range" name="range" max="0" min="-6" step="1" />
+      <!--该处的step参数值可以理解为通过键盘左右方向键每次调整的值-->
+      <input type="submit" name="submit" value="提交" />
+    </form>
+    <br />
+    <br />
+    <p>
+      number属性的input控件其中只能输入数值，不能输入其他(字母、符号)
+      <br />该控件设置了max="999" min="-999" step="10"，意为：
+      <br />其中数值小于等于999，大于等于-999，且每次通过控件调整的值为10
+    </p>
+    <br />
+    <p>
+      range属性的input控件也用于提交数值，但其在网页中显示为滑动条
+      <br />与number一样，具有相同的参数列表。该控件设置了max="0" min="-6"
+      step="1" <br />共有7个值可选。每次通过左右方向键，调整的值为1
+      <br />若step设置为更大的数，则每次拖动滑动条/键盘控制，都会以更大的值来调整，意味着可选值变少。
+    </p>
+  </body>
+</html>

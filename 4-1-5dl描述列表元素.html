@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>4-1-5dl描述列表元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/黄色方块3000x1600.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top left,
+          #ff006a52,
+          #00e1ff52,
+          #645d0052,
+          #64004852,
+          #64520052,
+          #00643252,
+          #64000052
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+
+      .dl1 {
+        width: fit-content;
+        padding: 15px;
+        background: rgba(17, 0, 255, 0.308);
+        border-radius: 20px;
+        margin: 10px auto;
+        box-shadow: 2px 2px 3px black;
+      }
+
+      dt,
+      dd {
+        font-size: 17px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <dl class="dl1">
+      <dt>中国教育现状：</dt>
+      <dd>Java教学还在用老掉牙的Eclipse</dd>
+      <dd>数据库教学还用在老掉牙的MySQL 5.0</dd>
+      <dd>前端教学还在用没人用的垃圾Dreamweaver</dd>
+    </dl>
+    <p class="text1">
+      dl元素是定义列表
+      <br />常用于对术语活名词进行解释和描述，与ul列表和ol列表都不同，定义列表项前没有任何符号
+      <br />通常用于展示词汇表或者元数据(键-值对列表)
+      <br />如上所示，该dl元素内有一个头部子元素dt与三个子元素dd
+    </p>
+  </body>
+</html>

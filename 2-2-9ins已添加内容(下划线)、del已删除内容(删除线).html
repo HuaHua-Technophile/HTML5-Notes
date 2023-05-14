@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>2-2-9ins已添加内容(下划线)、del已删除内容(删除线)</title>
+  </head>
+  <body>
+    <ul>
+      <li><del>该项目已废除</del></li>
+      <li>列表项目</li>
+      <li><del>该项目已删除</del></li>
+      <li><ins datetime="2023-1-1">新增项目</ins></li>
+      <li>
+        <ins cite="关于为啥新增该项目的原因.html" datetime="2023-1-2"
+          >新增项目</ins
+        >
+      </li>
+    </ul>
+    <p>
+      ins表示已添加的内容
+      <br />del表示已删除的内容
+      <br />这两个元素有cite属性：用于提供一个url，指向说明编辑原因的页面(为啥删除为啥添加)
+      <br />datetime属性那个：用于提供编辑的时间
+      <br />页面不会把这两个属性值↑显示出来
+    </p>
+  </body>
+</html>

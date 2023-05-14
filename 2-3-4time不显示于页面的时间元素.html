@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>2-3-4time不显示于页面的时间元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/科技蜂巢7860x4320.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top right,
+          #ae00ff57,
+          #00ffb357,
+          #006eff57,
+          #00ff0d57,
+          #ff000057
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>华为圾皇发布史</h1>
+    <h4>
+      畅享10e圾皇<time datetime="2020-03-01">20年3月1日</time>横空出世!
+      <br />999的价格就能买到别家599都不如的配置！
+    </h4>
+    <h4>
+      畅享20se圾皇<time datetime="2020-12-23">20年12月23日</time>横空出世!
+      <br />令人惊艳的性价比！1299元买下的国产电子垃圾！被999元的红米note9和998元的realme
+      Q2全面吊打
+    </h4>
+    <div class="text1">
+      time标签用来表示24小时制时间或者公历日期，若表示日期则也可包含时间和时区
+      <br />此元素意在以机器可读的格式表示日期和时间。有安排日程表功能的应用可以利用这一点
+      <br />如上所示则设置了&lt;time
+      datetime="2020-03-01"&gt;20年3月1日&lt;/time&gt;
+    </div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-2-5-1select下拉菜单、option选项元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/2561x1943暗色玻璃水珠.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      p {
+        padding: 10px;
+        background: rgba(212, 0, 255, 0.2);
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="GET">
+      您的性取向：
+      <select>
+        <option>请选择</option>
+        <option>男</option>
+        <option>男同</option>
+        <option>男酮</option>
+        <option>男童</option>
+        <option>男男</option>
+        <option>♂同</option>
+      </select>
+      <br />
+      <br />练习时长(单选):
+      <select>
+        <option>零年</option>
+        <option>一年</option>
+        <option>一年半</option>
+        <option>两年</option>
+        <option selected>两年半</option>
+        <!--设置selected属性可设置默认选中项，效果与单选框/复选框中的checked一致-->
+        <option>三年</option>
+        <option>三年半</option>
+        <option>四年</option>
+      </select>
+      <br />
+      <br />爱好(多选):
+      <select multiple size="6">
+        <!--使用multiple属性可以设置该下拉菜单可被多选-->
+        <option selected>唱</option>
+        <option selected>跳</option>
+        <option selected>Rap</option>
+        <option selected>篮球</option>
+        <option>踢球</option>
+        <option>画画</option>
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="提交" />
+    </form>
+    <p>
+      select元素可设置size属性，表示显示的选项数
+      <br />还可设置multiple属性，此时该下拉菜单将具有多项选择的功能
+      <br />按住Ctrl键的同时即可选择多项
+    </p>
+    <p>
+      若需要option元素被默认选中，只需设置selected属性即可
+      <br />值得一提的是，与前两个multiple、required属性一样，不设置属性值“selected”也能生效
+    </p>
+  </body>
+</html>

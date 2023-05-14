@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-2-8datalist辅助菜单元素、list绑定属性</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/1920x2880光散射金属块.jpg) fixed center;
+        background-color: #1e1e1e;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+      .study_url {
+        width: 50%;
+        margin: 10px auto;
+        background: rgba(0, 0, 0, 0.308);
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      p {
+        background: rgba(0, 0, 0, 0.308);
+        padding: 13px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="study_url" action="#" method="GET">
+      请选择<strong>学习</strong>网址：
+      <input type="url" list="url_list" name="study_url" />
+      <datalist id="url_list">
+        <option label="GitHub" value="https://github.com/"></option>
+        <option
+          label="Stack Overflow"
+          value="https://stackoverflow.com/"></option>
+        <option label="V2ex" value="https://v2ex.com/"></option>
+        <option label="哔哩哔哩" value="https://www.bilibili.com/"></option>
+      </datalist>
+      <input type="submit" name="submit" value="访问" />
+    </form>
+    <p>
+      datalist元素可以实现数据列表的下拉效果。
+      <br />而input控件的list属性值可以绑定某个datalist元素，只需将list参数值设为datalist元素的id即可
+      <br />在上方的示例控件中，有一个&lt;datalist id="url_list"&gt;。
+      <br />同时input控件的list属性如右：list="url_list"。即绑定了一个上一行所写的datalist元素
+    </p>
+    <p>
+      与select元素不同，datalist常与input元素配合使用，且datalist仅提供选项列表，用户仍可自定义输入
+      <br />而select只能选择option选项中的，无法自定义输入
+    </p>
+  </body>
+</html>

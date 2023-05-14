@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-2-1-3date、month、week、time、datetime-local时间属性</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/5616x3744五彩的碎镜装饰.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      p {
+        background: rgba(132, 13, 136, 0.336);
+        border-radius: 30px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="GET">
+      <input type="date" value="2021-06-02" />
+      <!--data日期中，value默认值的写法为：yyyy-MM-dd-->
+      <br />
+      <br />
+      <input type="month" value="2021-06" />
+      <!--month日期中，value默认值的写法为：yyyy-MM-->
+      <br />
+      <br />
+      <input type="week" value="2021-W22" />
+      <!--week日期中，value默认值的写法为：yyyy-Www-->
+      <br />
+      <br />
+      <input type="time" value="20:17" />
+      <!--time时间中，value默认值的写法为：HH:mm-->
+      <br />
+      <br />
+      <input type="datetime-local" value="2021-06-02T20:23" />
+      <!--datetime-local时间中，value默认值的写法为：yyyy-MM-ddTHH:mm-->
+      <!--<input type="datetime"/>是已被废弃的值，不建议使用与学习-->
+      <input type="submit" value="提交" />
+      <p>
+        从上往下，依次是：
+        <br />data日期，value默认值的写法为：yyyy-MM-dd
+        <br />month日期，value默认值的写法为：yyyy-MM
+        <br />week日期，value默认值的写法为：yyyy-Www
+        <br />time时间，value默认值的写法为：HH:mm
+        <br />datetime-local时间，value默认值的写法为：yyyy-MM-ddTHH:mm
+      </p>
+    </form>
+  </body>
+</html>

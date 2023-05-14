@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>29-1Cookie</title>
+  </head>
+  <body>
+    <p>
+      在JavaScript中，Cookie是一种用于存储web页面的用户信息的数据，它们以名/值对的形式保存在你电脑上的文本文件中
+      <br />你可以通过 document.cookie 属性来创建、读取、修改和删除 Cookie 信息
+      <br />Cookie 可以用于会话状态管理、个性化设置和浏览器行为跟踪等方面
+    </p>
+    <script>
+      // 在 JavaScript 中，您可以使用 document.cookie 属性来创建、读取、修改和删除 Cookie 信息
+      // 创建（设置）新的 Cookie 信息，需要以 name=value 形式的字符串来定义新的 Cookie 信息，如下例所示：
+      document.cookie = "username=Bill Gates";
+      // 您还可以为 Cookie 添加一个过期时间（以 UTC 或 GMT 时间）。不设置的话,默认情况下，在浏览器关闭时会删除 Cookie.若设置的过期时间为过去,则表示已过期,也会在浏览器关闭时删除
+      document.cookie =
+        "username=Bill Gates; expires=Sun, 31 Dec 2099 12:00:00 UTC";
+      // 您可以使用 path 参数告诉浏览器 Cookie 的路径。默认情况下，Cookie 属于当前页面。
+      document.cookie =
+        "username=Bill Gates; expires=Sun, 31 Dec 2099 12:00:00 UTC; path=/";
+      // 读取（获取）Cookie 信息，可以使用以下代码：
+      let x = document.cookie;
+      // document.cookie 会以字符串的方式返回所有的 Cookie，类型格式：cookie1=value; cookie2=value; cookie3=value;
+      // 修改（更新）Cookie 信息，可以像创建 Cookie 一样重新设置它：
+      document.cookie =
+        "username=Steve Jobs; expires=Sun, 31 Dec 2099 12:00:00 UTC; path=/";
+      // 删除（清除）Cookie 信息，可以把 expires 参数设置为过去的时间即可：
+      document.cookie =
+        "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    </script>
+  </body>
+</html>

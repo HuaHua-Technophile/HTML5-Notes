@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>6-3-11input控件的max最大值、min最小值、step步长属性</title>
+  </head>
+  <body>
+    <p>
+      表单最大值、最小值和步长是指在使用数字输入框（input的type为number或range）时，可以设置的一些属性来限制用户输入的数值范围和增减幅度
+    </p>
+    <p>
+      最大值（max）属性表示数字输入框能输入的最大值，如果用户输入超过该值，会提示无效
+    </p>
+    <p>
+      最小值（min）属性表示数字输入框能输入的最小值，如果用户输入低于该值，也会提示无效
+    </p>
+    <p>
+      步长（step）属性表示数字输入框每次增加或减少的幅度，比如设置为2，则每次点击上下箭头或滑动条时，数值会变化2个单位
+    </p>
+    <p>例如，如果你想要让用户输入一个1到10之间的奇数，你可以使用以下代码：</p>
+    <input type="number" min="1" max="10" step="2" value="1" />
+    <p>这样，用户只能在1、3、5、7、9之间选择一个数值</p>
+  </body>
+</html>

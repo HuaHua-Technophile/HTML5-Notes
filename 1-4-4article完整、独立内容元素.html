@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://i.328888.xyz/2023/04/14/ixDL13.jpeg"
+      type="image/png" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.css"
+      rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.js"></script>
+    <title>1-4-4article完整、独立内容元素</title>
+    <style type="text/css">
+      :root {
+        background: url(./img/水体附近的高层建筑3717x5672.jpg) fixed center;
+        background-size: cover;
+        color: #c8c8c8;
+      }
+
+      .text1 {
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 10px;
+        background: radial-gradient(
+          at top right,
+          #ae00ff57,
+          #00ffb357,
+          #006eff57,
+          #00ff0d57,
+          #ff000057
+        );
+        border-radius: 25px;
+        width: fit-content;
+        transition: all 0.5s;
+      }
+
+      .text1:hover {
+        color: #c8c8c8;
+        transform: translateY(-2%);
+        background: #00000059;
+        box-shadow: 1px 1px 10px black;
+      }
+
+      .article1,
+      .article2 {
+        margin: 13px auto;
+        padding: 5px 12px;
+        background: rgba(162, 0, 255, 0.281);
+        border-radius: 30px;
+      }
+
+      h3 {
+        position: relative;
+        left: 60px;
+      }
+
+      .comment {
+        color: #c8c8c8;
+        font-family: "微软雅黑";
+        display: block;
+        width: 90%;
+        padding: 10px;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.267);
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <article class="article1">
+      <h1>第一章标题(h1)</h1>
+      <section>
+        <h3>第一节标题(h3)</h3>
+      </section>
+      <section>
+        <h3>第二节标题(h3)</h3>
+      </section>
+    </article>
+    <article class="article2">
+      <h1>评论区:</h1>
+      <textarea
+        class="comment"
+        name="comment"
+        cols="30"
+        rows="10"
+        placeholder="请输入您的评论">
+      评论区
+      </textarea>
+    </article>
+    <p class="text1">
+      article元素表示文档、页面、应用或网站中的独立结构(与上下文不相关)
+      <br />其意在成为可独立分配的或可复用的结构
+      <br />它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式小部件
+      <br />常用section分块元素进行分割
+    </p>
+    <p class="text1">
+      如上所示则是两个article元素，分别代表了标题模块与评论区模块
+      <br />其中标题模块内使用了两个section元素进行分割
+    </p>
+  </body>
+</html>
