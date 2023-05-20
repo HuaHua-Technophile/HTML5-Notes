@@ -83,7 +83,6 @@ $("#audio").on(
   "timeupdate",
   throttle(function () {
     let currentTime = this.currentTime;
-
     $("#Lyrics>ul>li").each(function () {
       if (currentTime > $(this).attr("data-time")) {
         $(this).addClass("play").siblings().removeClass("play");
